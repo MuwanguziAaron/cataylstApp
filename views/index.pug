@@ -1,0 +1,15 @@
+extends layout2 
+block content 
+    if manager.length 
+        table.listings-table.table-dark.table-striped 
+            thead 
+                tr 
+                    th First Name
+                    th Last Name 
+                    th Marital Status 
+            tbody 
+            each user in manager 
+                tr 
+                    td #{user.firstname}
+                    td #{user.secondname} 
+                    td #{user.maritalstatus}

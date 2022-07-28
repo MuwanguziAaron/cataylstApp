@@ -1,0 +1,23 @@
+extends loginlayout 
+block content 
+    body.dash 
+        .container-login 
+            if alert == "error"
+                 div.alert.alert-danger Login failed! Invalid username or password.
+            .container
+                h1 karibu 
+                form(action='/user' method='POST' onsubmit="validation();")
+                    h4.sign-in Register!
+                    .form-floating
+                        small#error1
+                        input#exampleInputEmail1.form-control(type='text' name='username'  placeholder='User Name')
+                    br
+                    .form-floating
+                        small#error2
+                        input#exampleInputPassword1.form-control(type='text' name='email' aria-describedby='emailHelp' placeholder='Email')    
+                    br
+                    .form-floating
+                        small#error3 
+                        input#exampleInputPassword1.form-control(type='password' name='password' placeholder='Password')
+                    br
+                    button.btn.btn-primary(type='submit') Submit 
